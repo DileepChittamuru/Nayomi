@@ -1,0 +1,35 @@
+<app-header></app-header>
+    <!-- Global Wrapper to Center Content -->
+    <div class="wrapper">
+
+        <!-- Banner -->
+        <div class="banner bg" style="background-image: url(../../assets/bg/globe.jpg);" data-goto="http://social-innovation.hitachi/us/index.html">
+            <div class="container">
+                <div class="row intro middle-xs">
+                    <div class="col-xs-12 col-md-7 col-md-offset-5">
+                        <h3 class="text-display-small">
+                            Hitachi Solutions Innovation Business
+                        </h3>
+                        <h2 class="text-display">
+                            Login
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div class="container">
+            <div class="row middle-xs center-xs">
+                <div class="col-xs-12 col-md-4">
+                  <form class="login-container">
+                    <!-- <form class="login-container" action="http://10.218.172.10:9022/api/sibDemoPortal/login" method="post"> -->
+                        <input type="text" name="username" placeholder="Username" class="loginbox">
+                        <input type="text" name="password" placeholder="Password" class="loginbox">
+                        <button type="submit" class="btn btn-primary" (click)="validateLogin()">Login</button>
+                   </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
