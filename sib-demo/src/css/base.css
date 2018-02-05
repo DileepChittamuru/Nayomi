@@ -1,0 +1,628 @@
+/*
+** Base classes that are needed for any project regardless of theme design
+** Use this order:
+**  - Positioning
+**  - Display & Box Model
+**  - Color
+**  - Text
+**  - Other
+*/
+
+*, ::after, ::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Roboto',sans-serif;
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: #dfdfdf;
+    color: #0d0d0d;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* Colors */
+.color-primary {
+    color: #c00;
+}
+.color-secondary {
+    color: #12A6C2;
+}
+
+/*
+** Anchor
+*/
+
+a {
+    color: #c00;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+a:hover {
+    color: #b00;
+    text-decoration:underline;
+}
+
+/*
+** Image
+*/
+
+img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+.bg {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+.bg-contain {
+    background-size: contain;
+}
+
+/*
+** Typography
+*/
+
+h1, h2, h3, h4, h5, h6,
+.text-display,
+.text-display-small {
+    margin-bottom: 1rem;
+    font-family: 'Oswald',sans-serif;
+    text-transform: uppercase;
+    display: block;
+}
+h1 {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+h2, h2, h3, h4, h5, h6 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+.text-display {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 500;
+}
+.text-display-small {
+    font-size: 0.875rem;
+}
+.text-lead {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+.text-xs {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+.text-lg {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.text-xl {
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+/* Medium. Above 48rem (768px) */
+@media only screen and (min-width: 48rem) {
+    h1 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    h2 {
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    h3, h4, h5, h6 {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+    .text-display {
+        font-size: 5rem;
+    }
+}
+
+/*
+** Border
+*/
+
+.top-border { /* decorative line */
+    border-top: 0.25rem solid #c00;
+    position: relative;
+    padding-top: 0.5rem;
+    display: inline-block;
+}
+.top-border:after {
+    content: "";
+    width: 100%;
+    height: 8px;
+    background-color: #fff;
+    position: absolute;
+    left: 2rem;
+    top: -6px;
+}
+.bottom-border { /* decorative line */
+    border-bottom: 0.25rem solid #c00;
+    position: relative;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+.bottom-border:after {
+    content: "";
+    width: 100%;
+    height: 0.25rem;
+    background-color: #fff;
+    position: absolute;
+    left: 8rem;
+    bottom: -0.25rem;
+}
+.left-border { /* decorative line */
+    border-left: 0.25rem solid #c00;
+    position: relative;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    padding: 1rem 0 1rem 2rem;
+    margin: 2rem 0 3rem 2rem;
+}
+
+/*
+** Alignment
+*/
+
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.float-left  {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.clearfix,
+.clearfix:before,
+.clearfix:after {
+        content: "";
+        display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+
+/* Lists */
+.list {
+    list-style-type: disc;
+    margin: 0 0 0 1rem;
+}
+.list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+}
+.list > li:before {
+    content: "\203A";
+    margin-left: 0;
+    margin-top: 0;
+    position: absolute;
+    left: 0.5rem;
+}
+
+/*
+** Diaplay & Position
+*/
+
+.block,
+.show {
+    display: block;
+}
+.hide {
+    display: none !important;
+}
+.not-visible {
+    visibility: hidden !important;
+}
+.inline-block {
+    display: inline-block;
+}
+.inline {
+    display: inline;
+}
+.relative {
+    display: relative;
+}
+.absolute {
+    display: absolute;
+}
+
+/* Icons */
+.icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    fill: #cc0000;
+    transition: all 0.25s 0.25s ease;
+}
+.icon:hover {
+    fill: #414141;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #c00;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    color: #c00;
+    font-family: 'Oswald',sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+.btn:hover {
+    color:#fff;
+}
+.btn-primary {
+    background-color: #c00;
+    border: 0;
+    color: #fff;
+}
+.btn-primary:hover {
+        background-color: rgba(204, 0, 0, 0.75);
+}
+.btn-secondary {
+    background-color: #46e5e5;
+    border: 0;
+    color: #fff;
+}
+.btn-secondary:hover {
+    background-color: rgba(70, 229, 229, 0.5);
+}
+
+
+/* Layout */
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1440px;
+    background-color: #fff;
+    margin: 0 auto;
+    overflow:hidden;
+}
+.container {
+    width: 100%;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* helpers */
+.videoWrapper {
+    display: inline-block; /* let it be styled thusly */
+    padding: 0;            /* get rid of pre-styling */
+    margin: 0;
+    width: 100%;           /* take up full width available */
+    padding-top: 56.25%;   /* give aspect ratio of 16:9; "720 / 1280 = 0.5625" */
+    height: 0px;           /* don't want it to expand beyond padding */
+    position: relative;
+}
+.videoWrapper > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+}
+.overlay:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 20%, rgba(0,0,0,0.75) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 20%,rgba(0,0,0,0.75) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%,rgba(0,0,0,0.75) 100%);
+}
+.overlay-100:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.25);
+}
+
+/*
+** Padding & Margin Helpers
+*/
+
+.mb20 {
+    margin-bottom: 2rem;
+}
+
+
+
+
+/* Extra Small. Above 32rem (512px) */
+@media only screen and (min-width : 32rem) {
+
+}
+
+/* Medium. Above 48rem (768px) */
+@media only screen and (min-width: 48rem) {
+    .container {
+        padding: 0 3rem;
+    }
+}
+
+/* Large. Above 64rem (1024px) */
+@media only screen and (min-width: 64rem) {
+    .container {
+        padding: 0 5rem;
+    }
+}
+
+/* Extra large. Above 80rem (1280px) */
+@media only screen and (min-width: 80rem) {
+    .container {
+        padding: 0 10rem;
+    }
+}
+
+
+/* Flip */
+.flip {
+  display: inline-block;
+  transform: rotateY(180deg);
+}
+
+/* Animation */
+.bounce {
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+  -ms-animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-0.75rem);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-0.75rem);
+  }
+}
+/* IE ONLY */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .bounce {
+      animation: no-bounce 1s infinite alternate;
+      -webkit-animation: no-bounce 1s infinite alternate;
+      -ms-animation: no-bounce 1s infinite alternate;
+    }
+    @keyframes bounce {
+
+    }
+    @-webkit-keyframes bounce {
+
+    }
+}
+
+/* morph */
+.morphpanel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective: 50vw;
+    margin-top:50px;
+    z-index: 1;
+}
+.morphpanel__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:#b00;
+    margin: 0 10%;
+    z-index: 2;
+}
+.morphpanel .morphpanel__bg {
+    animation: morph 10s infinite;
+    text-align: center;
+    color:#fff;
+}
+@keyframes morph {
+    0%, 100% { transform: rotateX(-15deg) rotateY(0); }
+    25% { transform: rotateX(15deg) rotateY(15deg); }
+    50%{  transform: rotateX(-15deg) rotateY(15deg); }
+    75%{ 	transform: rotateX(-15deg) rotateY(-15deg); }
+}
+@keyframes morphshadow {
+    0%, 100% { transform: rotateX(-7deg) rotateY(0); }
+    25% { transform: rotateX(7deg) rotateY(7deg); }
+    50%{  transform: rotateX(-7deg) rotateY(7deg); }
+    75%{ 	transform: rotateX(-7deg) rotateY(-7deg); }
+}
+
+/* Spin */
+.spin {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 500ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 500ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+
+/*
+** Blockquote
+*/
+
+blockquote {
+    max-width: 90%;
+    margin: 1rem auto;
+    position: relative;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    padding: 0 0.5rem;
+}
+blockquote:before {
+    content: "\201C";
+    font-weight: bold;
+    font-size: 4rem;
+    color: rgba(216, 216, 216, 0.25);
+    position: absolute;
+    top: 1.5rem;
+    left: -1rem;
+    font-style: normal;
+}
+blockquote:after {
+    content: "\201D";
+    font-weight: bold;
+    font-size: 4rem;
+    color: rgba(216, 216, 216, 0.25);
+    position: absolute;
+    bottom: -2rem;
+    right: -1rem;
+    font-style: normal;
+}
+blockquote span {
+    display: block;
+    font-weight:900;
+    margin:1rem auto;
+}
+
+/* Extra Small. Above 32rem (512px) */
+@media only screen and (min-width : 32rem) {
+
+}
+
+/* Medium. Above 48rem (768px) */
+@media only screen and (min-width: 48rem) {
+    blockquote {
+        max-width: 80%;
+        margin: 2rem auto;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+    }
+    blockquote:before {
+        font-size: 6rem;
+        left: -2rem;
+    }
+    blockquote:after {
+        font-size: 6rem;
+        right: -2rem;
+    }
+}
+
+/* Large. Above 64rem (1024px) */
+@media only screen and (min-width: 64rem) {
+    blockquote {
+        max-width: 90%;
+        position: relative;
+        margin: 4rem auto 6rem;
+        font-size: 2.25rem;
+        line-height: 2rem;
+        font-style: italic;
+    }
+}
+
+/* Extra large. Above 80rem (1280px) */
+@media only screen and (min-width: 80rem) {
+
+}
