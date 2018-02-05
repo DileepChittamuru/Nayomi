@@ -1,0 +1,188 @@
+
+<app-global-header></app-global-header>
+    <!-- Global Navigation -->
+    <!-- Global Wrapper to Center Content -->
+    <div class="wrapper" *ngIf="page == 'landing'">
+
+        <!-- Banner -->
+        <div class="banner bg" style="background-image: url(../../assets/bg/globe.jpg);" data-goto="http://social-innovation.hitachi/us/index.html">
+            <div class="container">
+                <div class="row intro middle-xs">
+                    <div class="col-xs-12 col-md-7 col-md-offset-5">
+                        <h3 class="text-display-small">
+                            Hitachi Solutions Innovation Business
+                        </h3>
+                        <h2 class="text-display">
+                            Solution Demos
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 options">
+                    <h2>Industries</h2>
+                    <p>
+                        Inspire customers with demos of solutions to help them meet their specific industry challenges.
+                    </p>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left red middle-xs center-xs">
+                            <svg class="icon icon-chevron-thin-right">
+                                <use xlink:href="../../assets/icons.svg#icon-chevron-small-right"></use>
+                            </svg>
+                        </div>
+                        <div class="flexbox__right middle-xs start-xs">Transportation</div>
+                    </div>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left red middle-xs center-xs">
+                            <svg class="icon icon-chevron-thin-right">
+                                <use xlink:href="../../assets/icons.svg#icon-chevron-small-right"></use>
+                            </svg>
+                        </div>
+                        <div class="flexbox__right middle-xs start-xs">Manufacturing</div>
+                    </div>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left red middle-xs center-xs">
+                            <svg class="icon icon-chevron-thin-right">
+                                <use xlink:href="../../assets/icons.svg#icon-chevron-small-right"></use>
+                            </svg>
+                        </div>
+                        <div class="flexbox__right middle-xs start-xs">Smart Spaces</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-4 options">
+                    <h2>Solutions</h2>
+                    <p>
+                        Access demos highlighted key solutions that have been developed and co-created with customers.
+                    </p>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left bg" style="background-image: url(../../assets/thumbnails/11.jpg)">&nbsp;</div>
+                        <div class="flexbox__right thumbs middle-xs start-xs">Asset Management</div>
+                        <div class="flexbox__arrow">
+                            <svg class="icon icon-chevron-small-right">
+                                <use xlink:href="../../assets/icons.svg#icon-chevron-small-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left bg" style="background-image: url(../../assets/thumbnails/10a.jpg)">&nbsp;</div>
+                        <div class="flexbox__right thumbs middle-xs start-xs">Energy Management</div>
+                        <div class="flexbox__arrow">
+                            <svg class="icon icon-chevron-small-right">
+                                <use xlink:href="../../assets/icons.svg#icon-chevron-small-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left bg" style="background-image: url(../../assets/thumbnails/6.jpg)">&nbsp;</div>
+                        <div class="flexbox__right thumbs middle-xs start-xs">Video Intelligence</div>
+                        <div class="flexbox__arrow">
+                            <svg class="icon icon-chevron-small-right">
+                                <use xlink:href="../../assets/icons.svg#icon-chevron-small-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left bg" style="background-image: url(../../assets/thumbnails/8.jpg)">&nbsp;</div>
+                        <div class="flexbox__right thumbs middle-xs start-xs">Smart Manufacturing</div>
+                        <div class="flexbox__arrow">
+                            <svg class="icon icon-chevron-small-right">
+                                <use xlink:href="../../assets/icons.svg#icon-chevron-small-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left bg" style="background-image: url(../../assets/thumbnails/7.jpg)">&nbsp;</div>
+                        <div class="flexbox__right thumbs middle-xs start-xs">Water Solutions</div>
+                        <div class="flexbox__arrow">
+                            <svg class="icon icon-chevron-small-right">
+                                <use xlink:href="../../assets/icons.svg#icon-chevron-small-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-4 options">
+                    <h2>Highlighted Use Cases</h2>
+                    <p>
+                        Access sales collateral for key IoT use cases that can be applicable to any industry.
+                    </p>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left detail bg" style="background-image: url(../../assets/thumbnails/5.jpg)">&nbsp;</div>
+                        <div class="flexbox__right detail">
+                            <h3>Predictive Maintenance</h3>
+                            <p>
+                                Receive notifications regarding the expected risk and need for maintenance to avoid failure.
+                                <svg class="icon icon-right-chevron">
+                                    <use xlink:href="../../assets/icons.svg#icon-right-chevron"></use>
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left detail bg" style="background-image: url(../../assets/thumbnails/13.jpg)">&nbsp;</div>
+                        <div class="flexbox__right detail">
+                            <h3>Prescriptive Maintenance</h3>
+                            <p>
+                                Receive repair recommendations deduced from both current condition and repair history.
+                                <svg class="icon icon-right-chevron">
+                                    <use xlink:href="../../assets/icons.svg#icon-right-chevron"></use>
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flexbox" (click)="page = 'demo'">
+                        <div class="flexbox__left detail bg" style="background-image: url(../../assets/thumbnails/12.jpg)">&nbsp;</div>
+                        <div class="flexbox__right detail">
+                            <h3>Edge</h3>
+                            <p>
+                                Demonstrating capturing data at the edge.
+                                <svg class="icon icon-right-chevron">
+                                    <use xlink:href="../../assets/icons.svg#icon-right-chevron"></use>
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Banner -->
+        <div class="container footer-banner">
+            <div class="row middle-xs start-xs" style="background-color: #525361;color:#fff;align-items: stretch;">
+                <div class="col-xs-12 col-sm-3 bg" style="background-image: url(../../assets/thumbnails/AdobeStock_42474491.jpg);min-height:8rem;">
+
+                </div>
+                <div class="col-xs-12 col-sm-9" style="padding:2rem;">
+                    <h3>Hitachi Solutions Innovation Business</h3>
+                    <p>
+                        Browse the Hitachi Social Innovation website for inspiration and improve your understanding of all the expertise
+                        and solutions Hitachi has to offer.
+                    </p>
+                    <a href="#" class="btn btn-primary">
+                        <svg class="icon icon-chevron-thin-right">
+                            <use xlink:href="../../assets/icons.svg#icon-chevron-thin-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container footer">
+            <div class="row middle-xs center-xs end-sm">
+                <div class="col-xs-12 col-sm-3">
+                    <img src="../../assets/Hitachi_inspire_the_next-Logo.png" alt="Hitachi Inspire The Next">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                    <a href="feedback.html">Feedback &amp; Assistance</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <app-demo *ngIf="page == 'demo'"></app-demo>
