@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 
 @Component({
@@ -19,9 +19,5 @@ export class GlobalHeaderComponent implements OnInit {
     this.tab = tabName;
     //this.title = this.translationLet[tabName];
     // this.subtitle = this.translationLet
-  }
-  @Output() gotoOtion = new EventEmitter<string>();
-  gotoOtion(searchString){
-    this.preview.emit(searchString);
   }
 }

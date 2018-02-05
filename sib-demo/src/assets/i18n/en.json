@@ -1,0 +1,19 @@
+{
+    "login": "LOGIN",
+    "user_name" : "Username",
+    "password" :"Password",
+    "industries" : "Industries",
+    "solutions" : "Solutions",
+    "highlighted_use_cases" : "Highlighted Use Cases",
+	"industry_transportation" : "Transportation",
+	"industry_manufacturing" : "Manufacturing",
+	"industry_smart_spaces" : "Smart Spaces",
+	"solutions_asset_fleet_management" : "Asset / Fleet Management",
+	"solutions_energy_management" : "Energy Management",
+	"solutions_video_intelligence" : "Video Intelligence",
+	"solutions_smart_manufacturing" : "Smart Manufacturing",
+	"solutions_water_solutions" : "Water Solutions",
+	"highlighted_use_cases_predictive_aintenance" : "Predictive Maintenance",
+	"highlighted_use_cases_prescriptive_maintenance" : "Prescriptive Maintenance",
+	"highlighted_use_cases_edge" : "Edge"
+}
