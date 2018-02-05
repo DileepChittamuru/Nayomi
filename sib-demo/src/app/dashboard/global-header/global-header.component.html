@@ -1,0 +1,42 @@
+<div class="global-header">
+        <div class="global-header__logo">
+            <a href="index.html"><img src="../../../assets/sib-logo.svg" alt="Hitachi Social Innovation Business"></a>
+        </div>
+        <div class="global-header__menu">
+            <div class="logout">
+                <span>LOGOUT</span>
+                <svg class="icon icon-logout">
+                    <use xlink:href="../../../assets/icons.svg#icon-logout"></use>
+                </svg>
+            </div>
+            <a href="#" class="megamenu-trigger"><span class="megamenu-trigger__icon"></span></a>
+        </div>
+        <ul class="menu-main-category">
+            <li (mouseenter)="toggleTab('industry',$event)" [ngClass]="tab=='industry'?'open':null">
+                <span>Industries</span>
+                <ul class="menu-sub-category" [ngClass]="tab=='industry'?'showSubMenu':null">
+                    <li data-goto="landing.html">Transportation</li>
+                    <li data-goto="landing.html">Manufacturing</li>
+                    <li data-goto="landing.html">Smart Spaces</li>
+                </ul>
+            </li>
+            <li (mouseenter)="toggleTab('solution',$event)" [ngClass]="tab=='solution'?'open':null">
+                <span>Solutions</span>
+                <ul class="menu-sub-category" [ngClass]="tab=='solution'?'showSubMenu':null">
+                    <li data-goto="landing.html">Asset Management</li>
+                    <li data-goto="landing.html">Energy Management</li>
+                    <li data-goto="landing.html">Video Intelligence</li>
+                    <li data-goto="landing.html">Smart Manufacturing</li>
+                    <li data-goto="landing.html">Water Solutions</li>
+                </ul>
+            </li>
+            <li (mouseenter)="toggleTab('highlightedUseCase',$event)" [ngClass]="tab=='highlightedUseCase'?'open':null">
+                <span>Highlighted Use Cases</span>
+                <ul class="menu-sub-category" [ngClass]="tab=='highlightedUseCase'?'showSubMenu':null">
+                    <li data-goto="landing.html">Predictive Maintenance</li>
+                    <li data-goto="landing.html">Prescriptive Maintenance</li>
+                    <li data-goto="landing.html">Edge</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
